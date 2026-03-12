@@ -1,49 +1,50 @@
-gsap.from(".bottom h1 ", {
+gsap.from(".hero-text h1 ", {
     y: 10,
     opacity: 0,
     duration:1,
    delay:1,
   
 })
-gsap.from(".bottom h3 ", {
+gsap.from(".hero-text p ", {
     y: -25,
     opacity: 0,
-    duration:1.2,
-   delay:1.2,
+    duration:1,
+   delay:1,
     stagger:1,
 })
 
-gsap.to(".start",{
-    x:350,
+gsap.to(".btn",{
+    y:10,
+    opacity: 1,
     duration:1.2,
     delay:1.2,
-    height: "65px",
-  width: "250px",
+    stagger:1,
 })
-
-gsap.from(".nav-links li",{
-     y: -30,
+gsap.from(".stat h2 ", {
+    y: -25,
     opacity: 0,
-    duration:0.8,
-   delay:0.5,
-   stagger:0.3,
+    duration:1,
+   delay:1,
+    stagger:1,
 })
 
-gsap.from(".nav-right button",{
-     y: -30,
-    opacity: 0,
-    duration:0.8,
-   delay:0.7,
-   
-})
+ 
 
-gsap.from("#profile-icon img",{
+gsap.from(".big-img ",{
      y: -30,
     opacity: 0,
     duration:0.8,
    delay:0.9,
    
 })
+gsap.from(".small-images img",{
+     x: 30,
+    opacity: 0,
+    duration:0.8,
+   delay:0.9,
+   
+})
+
 
 
 gsap.to(".left-container img",{
@@ -53,17 +54,9 @@ gsap.to(".left-container img",{
     
 })
 
-// gsap.from(".navbar",{
-//      y: -30,
-//     opacity: 0,
-//     duration:0.8,
-//    delay:0.7,
-//    stagger:1,
-
-// })
 
 gsap.to(".Intro img",{
-    x:660,
+    x:700,
     duration:1.2,
     delay:1,
     scrollTrigger:{

@@ -6,210 +6,153 @@ body{
    cursor: pointer;
    caret-color: transparent;
    /* position: relative; */
-   background-color: rgba(12, 189, 248, 0.122);
+   
 }
 html {
   scroll-behavior: smooth;
 }
 
-
-.first {
-  height: 110vh;
-  width: 100%;
- background-image:linear-gradient(rgba(0, 0, 0,0.1), rgba(0, 0, 0,0.1 )), url("https://t3.ftcdn.net/jpg/05/02/59/04/360_F_502590469_8TWod874SsNg29Fsq4PoHHQMqpD0in9K.jpg");
-  background-size: cover; 
-  
-  position: static;
-  margin-top: 0px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
 }
 
-.topbox {
-  height: 140px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  
+.navbar{
+
+position:fixed;        /* permanent top */
+top:0;
+left:0;
+width:100%;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:18px 8%;
+
+background:linear-gradient(to right,#bfe4c8,#f4a5a5);
+
+z-index:1000;
 }
 
-#image{
-  height: 180px;
-  width: 220px;
-  margin-left: -200px;
-  margin-top: 10px;
+.logo{
+font-size:22px;
+font-weight:600;
 }
 
- .right-container{
-  height: 80px;
-  width: 46%;
-  display: flex; 
- 
-  margin-right: 0;
- 
-    justify-content: space-evenly; 
-  padding-right: 38px;
- }
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-   padding: 15px 25px; 
-  background: transparent;
-  position: relative;
-  z-index: 1000;
-    margin-top: 55px;
+.plus{
+border:2px solid black;
+padding:2px 6px;
+margin-left:5px;
 }
 
-/* Left Anchors */
-.nav-links {
-  display: flex;
-  justify-content: space-between;
-  gap: 23px;
-  list-style: none;
-   margin-top: 25px; 
-   
-}
-.nav-links {
-  white-space: nowrap;   /* ✅ Single line me rakhega */
+nav ul{
+display:flex;
+gap:40px;
+list-style:none;
 }
 
-
-.nav-links li a {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 400;
-  color: white;
-}
-.nav-links li a:hover {
-  border: 2px solid grey;
-  background-color: rgba(128, 128, 128, 0.344);
-  height: 36px;
-  width: auto;
-  padding: 6px;
-  border-radius: 15px;
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-size:16px;
 }
 
-/* Right section */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 10px;
+.login-btn{
+background:#7ed321;
+color:white;
+border:none;
+padding:10px 25px;
+border-radius:25px;
+cursor:pointer;
+font-size:15px;
 }
 
-/* Profile Icon */
-#profile-icon img {
-  width: 46px;
-  height: 46px;
-  margin-left: 25px;
-  border-radius: 50%;
-  cursor: pointer;
+.hero{
+padding:80px 10%;
+margin-top: 50px;
+background:linear-gradient(to right,#3df5a56e,#f9d2d5d6);
 }
 
-#profile-icon img:hover{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.hero-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+
 }
 
-/* Sidebar */
-#profile-sidebar {
-  position: absolute;
-  top: 0;
-  right: -400px;
-  width: 300px;
-  height: 100vh;
-  
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.471);
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
-  transition: right 0.3s ease-in-out;
-  z-index: 2000;
-  padding: 20px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
+.hero-text{
+width:50%;
+margin-left: 0;
+
 }
 
-#profile-sidebar.active {
-  right: 0;
-  color: black;
+.hero-text h1{
+font-size:55px;
+font-weight:700;
+margin-bottom:20px;
+color:#111;
 }
 
-.sidebar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  border-bottom: 1px solid rgba(255,255,255,0.2);;
-  padding-bottom: 15px;
+.hero-text p{
+color:#666;
+margin-bottom:25px;
+line-height:1.6;
 }
 
-.sidebar-header h2 {
-  font-size: 35px;
-  color: whitesmoke;
+.btn{
+background:#6ac000;
+color:white;
+padding:14px 28px;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+margin-bottom:40px;
+opacity: 0;
 }
 
-#close-sidebar {
-  font-size: 22px;
-  cursor: pointer;
+.stats{
+display:flex;
+gap:40px;
 }
 
-.sidebar-menu {
-  margin-top: 25px;
-  list-style: none;
-  padding: 0;
+.stat h2{
+font-size:33px;
+color: #1c1c1c;
+text-decoration: underline green;
 }
 
-.sidebar-menu li {
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: black;
-  padding: 12px 8px;
-  margin: 5px 0;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: 0.3s;
+.stat p{
+color:#666;
+font-size:14px;
 }
 
-.sidebar-menu li:hover {
-  background: rgba(255, 255, 255, 0.2);
+.hero-images{
+display:flex;
+gap:20px;
+align-items:center;
 }
 
-.logout-item {
-  margin-top: 15px;
-  color: #ff4d4d;
+.big-img img{
+width:380px;
+height: 560px;
+border-radius:10px;
 }
 
+.small-images{
+display:flex;
+flex-direction:column;
+gap:50px;
+margin-top: 100px;
+}
 
-  .login-btn{
-    height: 37px;
-    width: 110px;
-    color: white;
-    background-color: rgb(34, 194, 247);
-     margin-top: 1px; 
-     margin-left: 10px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-   
-  }
-
-  .login-btn:hover{
-    background: linear-gradient(180deg, #33bafc, #008ae6);
-      transform: scale(1.05);
-  }
-
-.bottom{
-  color: white;
-  margin-top: 110px;
-  margin-left: 60px;
-  
+.small-images img{
+width:240px;
+height: 240px;
+border-radius:10px;
 }
 
 h1{
@@ -243,23 +186,23 @@ h3{
 button:hover{
   background: linear-gradient(180deg, #33bafc, #008ae6);
       transform: scale(1.05);
-}
+} 
+
 .box{
   height: 400px;
   width: 100%;
-  background-color: #78c8fd;
-  
+  background:linear-gradient(to right,#bfe4c8,#f4a5a5);
 }
 
 h2{
   font-size: 40px;
-  color: white;
+  color: #111;
   padding-top: 52px;
   text-align: center;
 }
 h4{
   font-size: 16px;
-  color: aliceblue;
+  color: #666;
   margin-top: 10px;
   margin-left: 50px;
   text-align: center;
@@ -417,12 +360,13 @@ h4{
 }
 
 .Intro img{
-  height: 600px;
-  width: 620px;
+  height: 550px;
+  width: 700px;
   padding: 80px 70px 50px;
-  border-radius: 130px;
+  border-radius: 100px;
   margin-top: 38px;
-  margin-left: -650px;
+  margin-left: -670px;
+  box-shadow: 1px 1px  10px rgba(0, 0, 0, 0.285);
 }
 .about{
   height: 570px;
@@ -430,16 +374,17 @@ h4{
   font-family: 'Times New Roman', Times, serif;
   padding: 10px;
   margin-right: -570px;
-  margin-top: 55px;
+  margin-top: 125px;
   margin-left: 80px;
 }
 .about h1{
-  color: rgb(34, 194, 247);
+  color:#111;
   font-size: 70px;
 }
 .about p{
   margin-top: 25px;
   font-size: 18px;
+  color:#666;
   line-height: 27px;
 }
 

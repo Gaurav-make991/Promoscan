@@ -2,7 +2,7 @@ document.querySelector('.login-btn').addEventListener('click', function() {
     window.location.href = 'login.html';
 });
 
-document.querySelector('.start').addEventListener('click', function() {
+document.querySelector('.btn').addEventListener('click', function() {
     window.location.href = 'problem.html';
 });
 
